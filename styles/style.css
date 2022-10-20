@@ -1,0 +1,155 @@
+/* Google font import Poppins*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,600;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* ===== Colors ===== */
+  --primary-color: #0e4bf1;
+  --panel-color: #fff;
+  --text-color: #000;
+  --black-light-color: #707070;
+  --border-color: #e6e5e5;
+  --toggle-color: #ddd;
+  --box1-color: #4da3ff;
+  --box2-color: #ffe6ac;
+  --box3-color: #e7d1fc;
+  --title-icon-color: #fff;
+
+  /* ===== Transition ===== */
+  --tran-05: all 0.5s ease;
+  --tran-03: all 0.3s ease;
+  --tran-02: all 0.2s ease;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+}
+body.dark {
+  /* ===== Colors ===== */
+  --primary-color: #3a3b3c;
+  --panel-color: #242526;
+  --text-color: #ccc;
+  --black-light-color: #ccc;
+  --border-color: #4d4c4c;
+  --toggle-color: #fff;
+  --box1-color: #3a3b3c;
+  --box2-color: #3a3b3c;
+  --box3-color: #3a3b3c;
+  --title-icon-color: #ccc;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: var(--panel-color);
+  padding: 10px 14px;
+}
+
+nav .logo-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+nav .logo-image {
+  display: flex;
+  justify-content: center;
+  min-width: 45px;
+}
+
+nav .logo-image img {
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+nav .logo-name .logo_name {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-left: 14px;
+}
+
+/* Menu Section */
+.menu-items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.menu-items .nav-links {
+  list-style: none;
+  padding-left: 10px;
+  margin-bottom: 100%;
+}
+
+.menu-items .nav-links li {
+  margin-bottom: 15px;
+}
+
+.menu-items .nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--black-light-color);
+}
+
+.menu-items .nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+.menu-items .nav-links li:hover {
+  list-style: disc;
+  color: var(--primary-color);
+}
+
+.lg-icons {
+  font-size: 25px;
+}
+
+.xl-icons {
+  font-size: 40px;
+  cursor: pointer;
+}
+.menu-items .dark-mode-menu {
+  justify-items: flex-end;
+}
+.menu-items .nav-links .mode {
+  display: flex;
+  align-items: center;
+}
+.menu-items .toggle-mode {
+  height: 25px;
+  width: 50px;
+  border-radius: 15px;
+  background-color: var(--toggle-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  left: 20px;
+}
+
+.toggle-mode .switch {
+  background-color: var(--title-icon-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 7px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transition: var(--tran-03);
+}
+
+.toggle-mode .darked {
+  left: 30px;
+}
