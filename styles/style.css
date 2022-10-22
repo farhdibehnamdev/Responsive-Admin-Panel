@@ -58,6 +58,7 @@ nav {
 nav.close {
   width: 76px;
 }
+
 nav .logo-name {
   display: flex;
   align-items: center;
@@ -190,10 +191,12 @@ nav.close .menu-items .dark-mode-menu .mode .toggle-mode {
 
 .dashboard {
   position: relative;
-  height: 100vh;
   left: 250px;
   width: calc(100% - 250px);
   background-color: var(--panel-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .dashboard .top {
@@ -205,11 +208,22 @@ nav.close .menu-items .dark-mode-menu .mode .toggle-mode {
   width: calc(100% - 250px);
   left: 250px;
   top: 0;
+  background-color: var(--panel-color);
+  box-shadow: 0px 0px 1px rgba(82, 81, 81, 0.5);
+}
+nav.close ~ .dashboard .top {
+  left: 76px;
+  width: calc(100% - 76px);
+  transition: var(--tran-02);
+}
+nav.close ~ .dashboard {
+  left: 76px;
+  width: calc(100% - 76px);
+  transition: var(--tran-02);
 }
 
-nav.close ~ .dashboard .top {
-  left: 90px;
-  width: calc(100% - 90px);
+nav ~ .dashboard {
+  transition: var(--tran-02);
 }
 
 .dashboard .top .search-box {
@@ -237,4 +251,73 @@ nav.close ~ .dashboard .top {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+.dashboard .cards,
+.dashboard .activity {
+  margin: 20px;
+}
+.dashboard .cards {
+  margin-top: 130px;
+}
+.dashboard .cards-title,
+.dashboard .activity-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.dashboard .dashboard-icons {
+  color: var(--panel-color);
+  background-color: var(--primary-color);
+  padding: 3px 8px 3px 8px;
+  border-radius: 5px;
+}
+.dashboard .cards .cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cards .cards-container div {
+  padding: 30px;
+  border-radius: 10px;
+  margin-left: 10px;
+  flex: 1 1 auto;
+  box-shadow: 0px 0px 3px rgba(82, 81, 81, 0.5);
+}
+.cards-container .total-likes {
+  background-color: var(--box1-color);
+}
+.cards-container .comments {
+  background-color: var(--box2-color);
+}
+
+.cards-container .total-share {
+  background-color: var(--box3-color);
+}
+
+.cards-container div ul li {
+  text-align: center;
+  margin-bottom: 5px;
+  list-style: none;
+  font-size: 24px;
+}
+
+.activity .table {
+  width: 100%;
+  background-color: var(--panel-color);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 0px 3px rgba(82, 81, 81, 0.5);
+  padding: 50px;
+}
+.activity .table .center {
+  text-align: left;
+}
+.activity .table thead.center tr th {
+  padding: 15px;
+}
+
+.activity .table tbody.center tr td {
+  padding: 10px;
 }
